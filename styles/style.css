@@ -1,0 +1,997 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(75, 75, 75);
+    height: 50px;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    opacity: 0.5;
+}
+
+.logo {
+    float: left;
+    height: 50px;
+    width: 70px;
+    margin-left: 100px;
+}
+
+.list {
+
+    float: right;
+    list-style-type: none;
+}
+
+.list li {
+    margin-top: 13px;
+    margin-right: 30px;
+    display: inline-block;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.list li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.linehead {
+    height: 3px;
+    width: 100%;
+    position: relative;
+    margin: 4px 0;
+}
+
+.activeHome {
+    height: 3px;
+    width: 100%;
+    margin: 4px 0;
+    background-color: blue;
+    position: relative;
+}
+
+.linehead::after {
+    position: absolute;
+    content: "";
+
+    height: 3px;
+    width: 0;
+
+    top: 0;
+    left: 0;
+
+    background-color: blue;
+    transition: 0.5s;
+
+}
+
+.list li:hover .linehead::after {
+    width: 100%;
+    height: 3px;
+    opacity: 1;
+
+}
+
+/* end of header */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start overlay section */
+.overlay_container {
+    background-image: url(../images/ddd.jpg);
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+
+.overlay_first {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.home_content {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    width: 800px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home_text {
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.home_title {
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.home_info {
+
+    font-size: 20px;
+}
+
+.home_buttons button {
+    width: 150px;
+    height: 50px;
+    margin: 8px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+.learn-btn {
+    background-color: rgb(1, 65, 228);
+    color: #fff;
+}
+
+.home_buttons button:hover {
+    opacity: 0.6;
+}
+
+/* end of first section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start welcome section */
+.container {
+    height: fit-content;
+    width: 100%;
+    margin: auto;
+
+}
+
+.welcome_container {
+    overflow: hidden;
+    width: 80%;
+    top: 8vh;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 0;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.line {
+    height: 5px;
+    width: 70px;
+    background-color: blue;
+    margin: 4px auto;
+}
+
+.welcome_depart {
+    float: left;
+    border: 1px solid gray;
+    width: 334px;
+    height: 220px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.middle {
+    margin: 50px 39px;
+}
+
+.welcome_depart i {
+    font-size: 30px;
+    color: rgb(84, 153, 249);
+    padding: 20px;
+}
+
+.welcome_depart h3 {
+    font-size: 25px;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+
+}
+
+.welcome_depart p {
+    letter-spacing: 1.5px;
+    line-height: 22px;
+    color: rgb(156, 156, 156);
+    margin-bottom: 12px;
+}
+
+.welcome_depart a {
+    text-decoration: none;
+    color: rgb(84, 153, 249);
+    font-size: 20px;
+
+}
+
+.welcome_depart::after {
+    position: absolute;
+    content: "";
+
+    width: 0;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgb(48, 48, 48);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.welcome_depart:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: -1;
+}
+
+.welcome_depart:hover h3 {
+    transition: 0.4s;
+    color: rgb(255, 255, 255);
+}
+
+/* end welcome section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start featured section */
+.feat_container {
+    width: 80%;
+    height: fit-content;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.feat_title {
+    margin-bottom: 20px;
+}
+
+.feat_item {
+    float: left;
+    width: 280px;
+    height: 300px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.feat_layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    visibility: hidden;
+}
+
+.feat_item img {
+    margin-top: 7.5%;
+    width: 85%;
+    height: 85%;
+}
+
+.mid {
+    margin: 0 120px;
+    margin-top: 40px;
+
+}
+
+.mid2 {
+    margin: 0 120px;
+    margin-top: 40px;
+
+
+}
+
+.feat_info {
+    margin-top: 90px;
+    width: 100%;
+    height: 55%;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.feat_info span {
+    color: rgb(84, 153, 249);
+}
+
+.feat_info h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.feat_info a {
+    font-size: 25px;
+    padding: 8px;
+    background-color: rgb(84, 153, 249);
+}
+
+.feat_item:hover .feat_layer {
+    visibility: visible;
+    transition: 0.5s;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.feat_item:hover .feat_info {
+    opacity: 1;
+    transition: 1.5s;
+    width: 100%;
+    height: 70%;
+}
+
+/* end featured section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start offer section */
+
+.offer_container {
+    overflow: hidden;
+    width: 80%;
+    top: 8vh;
+    margin: auto;
+    position: relative;
+}
+
+.offer_depart {
+    float: left;
+    border: 1px solid gray;
+    width: 334px;
+    height: 200px;
+    margin: 50px 0;
+    position: relative;
+    top: 0;
+}
+
+.middle {
+    margin: 50 39px;
+}
+
+.middle2 {
+    margin: 0 39px;
+    margin-bottom: 100px;
+}
+
+.depart_content {
+    display: inline-block;
+    width: 240px;
+    margin-left: 70px;
+    position: absolute;
+    right: 7%;
+    top: 17%;
+
+}
+
+.next {
+    margin: 0;
+}
+
+.offer_depart i {
+    display: inline-block;
+    font-size: 30px;
+    color: rgb(84, 153, 249);
+    padding: 20px;
+    margin-top: 10px;
+
+}
+
+.icon6 {
+    margin-right: 15px;
+}
+
+.offer_depart h3 {
+    font-size: 25px;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+
+}
+
+.offer_depart p {
+    text-align: left;
+    line-height: 24px;
+    color: rgb(156, 156, 156);
+    margin-bottom: 12px;
+}
+
+.offer_depart a {
+    text-decoration: none;
+    color: rgb(84, 153, 249);
+    font-size: 20px;
+
+}
+
+.offer_depart::after {
+    position: absolute;
+    content: "";
+
+    width: 0;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgb(48, 48, 48);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.offer_depart:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: -1;
+}
+
+.offer_depart:hover h3 {
+    transition: 0.4s;
+    color: rgb(255, 255, 255);
+}
+
+/* End offer section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start why us section */
+
+.why_container {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 100px;
+    height: fit-content;
+}
+
+.why_lcontent {
+    display: inline-block;
+}
+
+.why_title {
+    text-align: left;
+    margin-bottom: 0;
+
+}
+
+.title_special {
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.why_line {
+    height: 5px;
+    width: 70px;
+    background-color: blue;
+    margin: 4px auto;
+    margin-left: 0;
+    margin-bottom: 40px;
+}
+
+.why_info {
+    color: gray;
+}
+
+.why_img {
+    float: right;
+    width: 50%;
+}
+
+.why_img img {
+    width: 100%;
+    height: 70%;
+}
+
+.why_lcontent p {
+    margin-bottom: 25px;
+}
+
+.why_lcontent li {
+    margin: 10px 0;
+}
+
+.why_lcontent i {
+    border: rgb(84, 153, 249) 1px solid;
+    color: rgb(84, 153, 249);
+    border-radius: 50%;
+}
+
+.why_img li {
+    opacity: 0.5;
+    float: right;
+    font-size: 40px;
+    padding-bottom: 0;
+    margin: 4px 20px;
+}
+
+.active {
+    color: rgb(84, 153, 249);
+}
+
+.why_img ul {
+    margin-right: 33.5%;
+}
+
+.why_img li:hover {
+    color: rgb(84, 153, 249);
+    opacity: 1;
+}
+
+/* end why us section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start atach section */
+
+.atatch_container {
+    background-image: url(../images/eee.jpeg);
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.atatch_overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: inherit;
+}
+
+.atatch_content {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.atatch_info {
+    float: left;
+    margin-top: 170px;
+    width: 230px;
+    color: #fff;
+    text-align: center;
+}
+
+.atatch_info i {
+    color: rgb(84, 153, 249);
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.atatch_info h2 {
+    font-size: 35px;
+}
+
+.atatch_info span {
+    font-size: 20px;
+}
+
+.sec1 {
+    margin-left: 41px;
+}
+
+.sec2 {
+    margin: 170 41px;
+}
+
+/* end atach section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start pricing section */
+
+.pricing_container {
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    top: 5%;
+    position: relative;
+    text-align: center;
+    height: fit-content;
+}
+
+.contents {
+    border: 1px solid gray;
+    height: 330px;
+    width: 292px;
+    float: left;
+    margin-top: 50px;
+    position: relative;
+}
+
+.pricing_sec_content2 {
+    margin: 50px 102px;
+
+}
+
+.pricing_sec_text {
+    font-size: 14px;
+    color: gray;
+    margin-top: 15px;
+    font-family: 'Lexend', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 25px;
+}
+
+.price {
+    border: 1px solid blue;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.price h1 {
+    margin-top: 5px;
+}
+
+.pricing_bt {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    width: 120px;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 72, 255);
+
+}
+
+.contents::after {
+    position: absolute;
+    content: "";
+
+    width: 100%;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgb(63, 63, 63);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.contents:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.contents:hover .text,
+.contents:hover .pricing_bt {
+    color: red;
+
+}
+
+/* end of pricing section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start secAtatch section */
+
+.secAtatch_container {
+    background-image: url(../images/course-1.jpg);
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.secAtatch_overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: inherit;
+}
+
+.secAtatch_content {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.secAtatch_div img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.secAtatch_div {
+    float: left;
+    width: 40%;
+    margin-top: 150px;
+    position: relative;
+    margin-left: 50px;
+}
+
+.secAtatch_info {
+    position: absolute;
+    top: 15px;
+    left: 105;
+}
+
+.secAtatch_info h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.secAtatch_info span {
+    color: rgb(84, 153, 249);
+}
+
+.secAtatch_div p {
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+/* end secAtatch section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start team section */
+
+.team_content {
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    height: fit-content;
+}
+
+.team_item {
+    width: 28%;
+    float: left;
+    background-color: rgb(185, 180, 180);
+    margin-top: 50px;
+
+    padding: 14px 18px;
+    text-align: center;
+    position: relative;
+}
+
+.team_image {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.sp {
+    margin: 50px 8%;
+}
+
+.team_image img {
+    width: 100%;
+
+}
+
+.team_overlay {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.team_overlay a {
+    font-size: 40px;
+    color: blue;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+}
+
+.team_overlay a i {
+    line-height: 40px;
+}
+
+.team_info_title {
+    margin-bottom: 10px;
+
+}
+
+.team_info span {
+    color: rgb(101, 101, 101);
+}
+
+.team_item:hover .team_info_title {
+    color: #fff;
+}
+
+.team_item:hover .team_info span {
+    color: blue;
+}
+
+.team_item:hover .team_overlay {
+    visibility: visible;
+}
+
+.team_item::after {
+    position: absolute;
+    content: "";
+
+    width: 100%;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgb(63, 63, 63);
+    opacity: 0;
+    transition: 1s;
+}
+
+.team_item:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+/* end of team section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start news section */
+
+.news_container {
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+
+}
+
+.news_content {
+    background-color: rgb(249, 247, 247);
+    overflow: hidden;
+    margin-top: 70px;
+
+}
+
+.news_item {
+    float: left;
+    width: 28%;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 15px;
+
+}
+
+.secondNewsItem {
+    margin: 0 8%;
+}
+
+.news_item img {
+    width: 77%;
+    height: 280px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+
+}
+
+.news_icons {
+    overflow: hidden;
+}
+
+.news_info li {
+    float: left;
+    margin: 10px 7px;
+    list-style-type: none;
+    font-size: 12px;
+}
+
+.news_info i {
+    color: rgb(84, 153, 249);
+    padding: 3px;
+}
+
+.news_info_title {
+    margin: 10px 0;
+}
+
+.news_info {
+    margin-left: 20px;
+}
+
+.news_info p {
+    color: gray;
+    margin: 20px 0;
+    word-spacing: 3px;
+    line-height: 22px;
+}
+
+.news_text a {
+    text-decoration: none;
+    color: rgb(84, 153, 249);
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.news_item::after {
+    position: absolute;
+    content: "";
+
+    width: 100%;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgb(88, 213, 244);
+    opacity: 0;
+    transition: 1s;
+}
+
+.news_item:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+/* end news section */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* start footer section */
+
+.footer_container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(67, 69, 82);
+    text-align: center;
+}
+
+.footer_img img {
+    margin-top: 60px;
+    height: 80px;
+    width: 180px;
+    border: 1px solid #fff;
+}
+
+.footer_container ul {
+    display: block;
+    list-style: none;
+    margin: 17px 0;
+}
+
+.footer_container li {
+    display: inline-block;
+}
+
+.footer_container a {
+    text-decoration: none;
+
+}
+
+.footer_container i {
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    padding-top: 7px;
+    background-color: rgb(84, 153, 249);
+    text-align: center;
+}
+
+.footer_container p {
+    padding-bottom: 60px;
+    color: gray;
+}
+
+/* end footer section */
+/* --------------------------------------------------------- */
